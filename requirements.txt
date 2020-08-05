@@ -1,0 +1,6 @@
+django
+jupyter notebook
+opencv-python
+pytesseract
+pdf2image
+tesseract
