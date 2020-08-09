@@ -25,7 +25,7 @@ def convertImage(uploaded_image):
     white = (255,255,255)
     threshold = (160,160,160)
     config = ('-l eng --oem 3 --psm 6 ')
-    image = cv2.imread('invoice_image.jpg')
+    image = cv2.imread(uploaded_image)
     mask = np.zeros(image.shape, dtype=np.uint8)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
@@ -51,14 +51,15 @@ def convertImage(uploaded_image):
     text = text.replace('-\n', '')     
     f.write(text)
     os.remove("ne_image.jpg")
-    os.remove("invoice_image.jpg")
+    os.remove(uploaded_image)
 
     f.close()
 
     #The code is specifically for India and can be extended to other countries as well . This is because Seller's state can be extracted from Gstn no then he list will be enormous .
-    final_file=str(datetime.datetime.now().strftime("%d-%m-%Y_%I-%M-%S_%p"))+'.'+'xlsx'
+    # final_file=str(datetime.datetime.now().strftime("%d-%m-%Y_%I-%M-%S_%p"))+'.'+'xlsx'
+    final_file="converted.xlsx"
     workbook = xlsxwriter.Workbook(final_file) 
-    outfile='out3_text.txt'
+    outfile='out_text.txt'
     worksheet = workbook.add_worksheet() 
     filename=outfile
     list={'01':'JAMMU AND KASHMIR','02':'HIMACHAL PRADESH','03':'PUNJAB','04':'CHANDIGARH','05':'UTTARAKHAND','06':'HARYANA','07':'DELHI','08':'RAJASTHAN','09':'UTTAR PRADESH','10':'BIHAR',

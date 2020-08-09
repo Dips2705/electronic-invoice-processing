@@ -1,3 +1,18 @@
+
+from PIL import Image 
+import pytesseract 
+import sys 
+from pdf2image import convert_from_path 
+import os 
+import cv2
+import numpy as np
+import re  
+import xlsxwriter 
+import math
+import pandas as pd
+import datetime
+
+
 def convertPDF(pdf_file_path):
   black = (0,0,0)
   white = (255,255,255)
@@ -740,3 +755,5 @@ def convertPDF(pdf_file_path):
           worksheet.merge_range('M9:Q9' , whole ,merge_format_1 )
   workbook.close()       
   os.remove(outfile)
+
+# convertPDF("Sample_Invoice_2.pdf")
