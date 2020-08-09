@@ -1,6 +1,18 @@
 # Electronic-Invoice-Processing
 Use of Image Processing models such as **Optical Character Recognition (OCR)** to digitalize the process of invoice transactions. Moving towards fully automated invoice processing and extracting data from pdf/jpeg/webcam image into scalable xlsx/csv template. UI deployment using styling scripts.
 
+# Demo 
+<div align = "center" >
+<video controls>
+  <source src="https://bit.ly/2Dr8HBn" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<br></br>
+<a href="https://bit.ly/2Dr8HBn">Link to full video</a>
+</div>
+
+
 ## Python Libraries Used
 * Pytesseract
 * pdf2image
