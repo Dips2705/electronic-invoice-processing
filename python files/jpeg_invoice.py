@@ -241,8 +241,9 @@ def convertImage(uploaded_image):
         s=s+all_lines_variable[k-1]
     else:
         s=s+all_lines_variable[k-2]
-    s=s+all_lines_variable[k]
-    worksheet.merge_range('M14:Q16' , s ,merge_format_1 )
+    if k>len(all_lines_variable):
+      s=s+all_lines_variable[k]
+      worksheet.merge_range('M14:Q16' , s ,merge_format_1 )
     f.close()
         
     #As the code is for India the currency will be INR only
@@ -640,12 +641,14 @@ def convertImage(uploaded_image):
                     app=app-list1[2]
                     Net_Unit_price=Net_Unit_price+list1[0]
                     taxable_amount=list1[3]
+                    qty=qty+list1[1]
                     Net_WH_Amount=Net_WH_Amount+taxable_amount
                 elif(y <= x and y <= z): 
                     worksheet.write('G'+str(18+C),list2[0],merge_format_1)
                     worksheet.write('F'+str(18+C),list2[1],merge_format_1)
                     worksheet.write('I'+str(18+C),list2[2],merge_format_1)
                     taxable_amount=list2[3]
+                    qty=qty+list2[1]
                     Net_Unit_price=Net_Unit_price+list2[0]
                     discount_percent=list2[2]/(list2[0]*list2[1])
                     app=app-discount_percent
