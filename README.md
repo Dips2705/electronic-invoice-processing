@@ -3,10 +3,7 @@ Use of Image Processing models such as **Optical Character Recognition (OCR)** t
 
 # Demo 
 <div align = "center" >
-<video controls>
-  <source src="https://bit.ly/2Dr8HBn" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
 
 <br></br>
 <a href="https://bit.ly/2Dr8HBn">Link to full video</a>
