@@ -4,7 +4,7 @@ Use of Image Processing models such as **Optical Character Recognition (OCR)** t
 # Demo 
 <div align = "center" >
 <video controls>
-  <source src="movie.mp4" type="video/mp4">
+  <source src="https://drive.google.com/file/d/1O3WsQxDEC859AgnvO5DiPUzSidoOYvmZ/view?usp=sharing" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
